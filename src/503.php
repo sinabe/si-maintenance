@@ -1,3 +1,9 @@
+<?php
+header($_SERVER["SERVER_PROTOCOL"] . ' 503 Service Temporarily Unavailable');
+header('Status: 503 Service Temporarily Unavailable');
+header('Retry-After: 300');
+?>
+
 <!doctype html>
 <html lang="fr-FR">
     <head>
