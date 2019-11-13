@@ -3,18 +3,18 @@
 /*
 Plugin Name: Sinabe Maintenance plugin
 Plugin URI:  https://sinabe.ch
-Description: Allow only admin to view website. Other user see a 503.php page or a simple maintenance text.
-Version:     1.0.1
+Description: Allow only administrator to view website. Other user get a 503 error page or a simple maintenance text.
+Version:     1.0.3
 Author:      Sinabe Sàrl
 Author URI:  https://sinabe.ch
 */
 
+defined( 'ABSPATH' ) or die( 'Good try !' );
+
 /**
  * WordPress Maintenance mode
- * To deactivet this function comment the add_action
  */
-
-function maintenace_mode()
+function si_maintenace_mode()
 {
     /**
      * Default maintenance page file.
@@ -35,4 +35,4 @@ function maintenace_mode()
     }
 }
 
-add_action('get_header', 'maintenace_mode');
+add_action('init', 'si_maintenance_mode');
